@@ -1,0 +1,125 @@
+{
+  "1_layer": {
+    "1_task": {
+      "inputData_addr": 5305,
+      "weightData_addr": 5694,
+      "outputData_addr": 5726,
+      "weight_lines": 27,
+      "output_lines": 1280
+    }
+  },
+  "2_layer": {
+    "2_task": {
+      "inputData_addr": 5726,
+      "weightData_addr": 7011,
+      "outputData_addr": 7106,
+      "weight_lines": 90,
+      "output_lines": 1280
+    }
+  },
+  "3_layer": {
+    "3_task": {
+      "inputData_addr": 7106,
+      "weightData_addr": 0,
+      "outputData_addr": 8391,
+      "weight_lines": 0,
+      "output_lines": 320
+    }
+  },
+  "4_layer": {
+    "4_task": {
+      "inputData_addr": 8391,
+      "weightData_addr": 8716,
+      "outputData_addr": 8901,
+      "weight_lines": 90,
+      "output_lines": 320
+    },
+    "5_task": {
+      "inputData_addr": 8391,
+      "weightData_addr": 8806,
+      "outputData_addr": 9221,
+      "weight_lines": 90,
+      "output_lines": 320
+    }
+  },
+  "5_layer": {
+    "6_task": {
+      "inputData_addr": 8901,
+      "weightData_addr": 9546,
+      "outputData_addr": 9911,
+      "weight_lines": 180,
+      "output_lines": 320
+    },
+    "7_task": {
+      "inputData_addr": 8901,
+      "weightData_addr": 9726,
+      "outputData_addr": 10231,
+      "weight_lines": 180,
+      "output_lines": 320
+    }
+  },
+  "6_layer": {
+    "8_task": {
+      "inputData_addr": 9911,
+      "weightData_addr": 10556,
+      "outputData_addr": 11561,
+      "weight_lines": 500,
+      "output_lines": 240
+    },
+    "9_task": {
+      "inputData_addr": 9911,
+      "weightData_addr": 11056,
+      "outputData_addr": 11801,
+      "weight_lines": 500,
+      "output_lines": 240
+    }
+  },
+  "7_layer": {
+    "10_task": {
+      "inputData_addr": 11561,
+      "weightData_addr": 12046,
+      "outputData_addr": 13051,
+      "weight_lines": 500,
+      "output_lines": 80
+    },
+    "11_task": {
+      "inputData_addr": 11561,
+      "weightData_addr": 12546,
+      "outputData_addr": 13131,
+      "weight_lines": 500,
+      "output_lines": 80
+    }
+  },
+  "8_layer": {
+    "12_task": {
+      "inputData_addr": 13051,
+      "weightData_addr": 13216,
+      "outputData_addr": 13581,
+      "weight_lines": 180,
+      "output_lines": 80
+    },
+    "13_task": {
+      "inputData_addr": 13051,
+      "weightData_addr": 13396,
+      "outputData_addr": 13661,
+      "weight_lines": 180,
+      "output_lines": 80
+    }
+  },
+  "9_layer": {
+    "14_task": {
+      "inputData_addr": 13581,
+      "weightData_addr": 13746,
+      "outputData_addr": 14111,
+      "weight_lines": 180,
+      "output_lines": 80
+    },
+    "15_task": {
+      "inputData_addr": 13581,
+      "weightData_addr": 13926,
+      "outputData_addr": 14191,
+      "weight_lines": 180,
+      "output_lines": 80
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "operator_type": "Pool",
+  "kernel_size": [2, 2],
+  "stride": [2, 2],
+  "padding": [0, 0],
+  "input_channels": 20,
+  "input_tensor_shape": [8, 8, 20],
+  "output_channels": 20,
+  "output_tensor_shape": [4, 4, 20],
+  "output_data": 80
+}
+

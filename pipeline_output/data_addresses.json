@@ -1,0 +1,143 @@
+{
+  "1_layer": {
+    "1_task": {
+      "inputData_addr": 5676,
+      "weightData_addr": 6065,
+      "outputData_addr": 6097,
+      "weight_lines": 27,
+      "output_lines": 1280
+    }
+  },
+  "2_layer": {
+    "2_task": {
+      "inputData_addr": 6097,
+      "weightData_addr": 7382,
+      "outputData_addr": 7477,
+      "weight_lines": 90,
+      "output_lines": 1280
+    }
+  },
+  "3_layer": {
+    "3_task": {
+      "inputData_addr": 7477,
+      "weightData_addr": 0,
+      "outputData_addr": 8762,
+      "weight_lines": 0,
+      "output_lines": 320
+    }
+  },
+  "4_layer": {
+    "4_task": {
+      "inputData_addr": 8762,
+      "weightData_addr": 9087,
+      "outputData_addr": 9272,
+      "weight_lines": 90,
+      "output_lines": 320
+    },
+    "5_task": {
+      "inputData_addr": 8762,
+      "weightData_addr": 9177,
+      "outputData_addr": 9592,
+      "weight_lines": 90,
+      "output_lines": 320
+    }
+  },
+  "5_layer": {
+    "6_task": {
+      "inputData_addr": 9272,
+      "weightData_addr": 9917,
+      "outputData_addr": 10282,
+      "weight_lines": 180,
+      "output_lines": 320
+    },
+    "7_task": {
+      "inputData_addr": 9272,
+      "weightData_addr": 10097,
+      "outputData_addr": 10602,
+      "weight_lines": 180,
+      "output_lines": 320
+    }
+  },
+  "6_layer": {
+    "8_task": {
+      "inputData_addr": 10282,
+      "weightData_addr": 10927,
+      "outputData_addr": 11932,
+      "weight_lines": 500,
+      "output_lines": 240
+    },
+    "9_task": {
+      "inputData_addr": 10282,
+      "weightData_addr": 11427,
+      "outputData_addr": 12172,
+      "weight_lines": 500,
+      "output_lines": 240
+    }
+  },
+  "7_layer": {
+    "10_task": {
+      "inputData_addr": 11932,
+      "weightData_addr": 12417,
+      "outputData_addr": 13422,
+      "weight_lines": 500,
+      "output_lines": 80
+    },
+    "11_task": {
+      "inputData_addr": 11932,
+      "weightData_addr": 12917,
+      "outputData_addr": 13502,
+      "weight_lines": 500,
+      "output_lines": 80
+    }
+  },
+  "8_layer": {
+    "12_task": {
+      "inputData_addr": 13422,
+      "weightData_addr": 13587,
+      "outputData_addr": 13952,
+      "weight_lines": 180,
+      "output_lines": 80
+    },
+    "13_task": {
+      "inputData_addr": 13422,
+      "weightData_addr": 13767,
+      "outputData_addr": 14032,
+      "weight_lines": 180,
+      "output_lines": 80
+    }
+  },
+  "9_layer": {
+    "14_task": {
+      "inputData_addr": 13952,
+      "weightData_addr": 14117,
+      "outputData_addr": 14482,
+      "weight_lines": 180,
+      "output_lines": 80
+    },
+    "15_task": {
+      "inputData_addr": 13952,
+      "weightData_addr": 14297,
+      "outputData_addr": 14562,
+      "weight_lines": 180,
+      "output_lines": 80
+    }
+  },
+  "10_layer": {
+    "16_task": {
+      "inputData_addr": 14482,
+      "weightData_addr": 0,
+      "outputData_addr": 14647,
+      "weight_lines": 0,
+      "output_lines": 80
+    }
+  },
+  "11_layer": {
+    "17_task": {
+      "inputData_addr": 14647,
+      "weightData_addr": 14732,
+      "outputData_addr": 15057,
+      "weight_lines": 320,
+      "output_lines": 2
+    }
+  }
+}

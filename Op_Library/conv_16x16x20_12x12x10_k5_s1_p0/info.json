@@ -1,0 +1,13 @@
+{
+  "operator_type": "Conv",
+  "kernel_size": [5, 5],
+  "stride": [1, 1],
+  "padding": [0, 0],
+  "input_channels": 20,
+  "input_tensor_shape": [16, 16, 20],
+  "output_channels": 10,
+  "output_tensor_shape": [12, 12, 10],
+  "weight_data": 500,
+  "output_data": 240
+}
+

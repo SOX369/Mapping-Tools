@@ -1,0 +1,39 @@
+[
+    {
+        "operator": "Conv",
+        "in_W": 16,
+        "in_H": 16,
+        "in_channels": 20,
+        "out_W": 16,
+        "out_H": 16,
+        "out_channels": 20,
+        "kernel": [3, 3],
+        "stride": 1,
+        "padding": 1
+    },
+    {
+        "operator": "Conv",
+        "in_W": 16,
+        "in_H": 16,
+        "in_channels": 20,
+        "out_W": 12,
+        "out_H": 12,
+        "out_channels": 20,
+        "kernel": [5, 5],
+        "stride": 1,
+        "padding": 0
+    },
+    {
+        "operator": "Conv",
+        "in_W": 12,
+        "in_H": 12,
+        "in_channels": 20,
+        "out_W": 8,
+        "out_H": 8,
+        "out_channels": 20,
+        "kernel": [5, 5],
+        "stride": 1,
+        "padding": 0
+
+    }
+]

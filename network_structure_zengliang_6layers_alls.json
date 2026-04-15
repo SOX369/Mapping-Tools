@@ -1,0 +1,71 @@
+[
+    {
+        "operator": "Conv",
+        "in_W": 4,
+        "in_H": 4,
+        "in_channels": 512,
+        "out_W": 4,
+        "out_H": 4,
+        "out_channels": 512,
+        "kernel": [3, 3],
+        "stride": 1,
+        "padding": 1
+    },
+    {
+        "operator": "Conv",
+        "in_W": 4,
+        "in_H": 4,
+        "in_channels": 512,
+        "out_W": 4,
+        "out_H": 4,
+        "out_channels": 512,
+        "kernel": [1, 1],
+        "stride": 1,
+        "padding": 0
+    },
+        {
+        "operator": "Conv",
+        "in_W": 4,
+        "in_H": 4,
+        "in_channels": 512,
+        "out_W": 4,
+        "out_H": 4,
+        "out_channels": 512,
+        "kernel": [3, 3],
+        "stride": 1,
+        "padding": 1
+    },
+    {
+        "operator": "Conv",
+        "in_W": 4,
+        "in_H": 4,
+        "in_channels": 512,
+        "out_W": 4,
+        "out_H": 4,
+        "out_channels": 512,
+        "kernel": [1, 1],
+        "stride": 1,
+        "padding": 0
+    },
+        {
+        "operator": "Pool",
+        "in_W": 4,
+        "in_H": 4,
+        "in_channels": 512,
+        "out_W": 1,
+        "out_H": 1,
+        "out_channels": 512,
+        "kernel": [
+            4,
+            4
+        ],
+        "stride": 1,
+        "padding": 0
+    },
+    {
+        "operator": "FC",
+        "isPrevFC": false,
+        "in_features": 512,
+        "out_features": 100
+    }
+]

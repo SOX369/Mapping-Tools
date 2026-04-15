@@ -1,0 +1,39 @@
+[
+    {
+        "operator": "Conv",
+        "in_W": 32,
+        "in_H": 32,
+        "in_channels": 3,
+        "out_W": 32,
+        "out_H": 32,
+        "out_channels": 10,
+        "kernel": [3, 3],
+        "stride": 1,
+        "padding": 1
+    },
+    {
+        "operator": "Conv",
+        "in_W": 32,
+        "in_H": 32,
+        "in_channels": 10,
+        "out_W": 32,
+        "out_H": 32,
+        "out_channels": 10,
+        "kernel": [3, 3],
+        "stride": 1,
+        "padding": 1
+    },
+    {
+        "operator": "Pool",
+        "in_W": 32,
+        "in_H": 32,
+        "in_channels": 10,
+        "out_W": 16,
+        "out_H": 16,
+        "out_channels": 10,
+        "kernel": [2, 2],
+        "stride": 2,
+        "padding": 0
+    }
+]
+
