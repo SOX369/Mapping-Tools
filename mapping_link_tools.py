@@ -138,3 +138,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#pyinstaller --noconfirm --onefile --console --name "mapping_link_tools" --add-data "Op_Library;Op_Library" --add-data "Data_Library;Data_Library" mapping_link_tools.py

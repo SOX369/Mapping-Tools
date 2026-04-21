@@ -116,6 +116,9 @@ def modify_final_addresses(input_file, final_output_file, task_addresses_file, d
     # 2. 读取包含控制、任务和数据的完整配置文件
     with open(input_file, "r", encoding="utf-8") as f:
         lines = f.readlines()
+        # 增加换行符校验
+        if lines and not lines[-1].endswith('\n'):
+            lines[-1] = lines[-1] + '\n'
 
     # 3. 按层和任务遍历，逐个修改地址
     global_task_counter = 1

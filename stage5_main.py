@@ -27,7 +27,6 @@ def run_pipeline():
 
     # 阶段四输出
     FINAL_OUTPUT_FILE = os.path.join(OUTPUT_DIR, "final_executable_config.txt")
-    # ==================================================
 
     # 确保输出目录存在
     os.makedirs(OUTPUT_DIR, exist_ok=True)

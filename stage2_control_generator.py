@@ -37,11 +37,9 @@ def get_task_counts_per_layer(network: list) -> list:
         if layer["operator"] == "Conv":
             # 卷积层按输出通道划分任务，每10个通道一个任务
             task_counts.append((layer["out_channels"] + 9) // 10)
-        # ================= FC SUPPORT ADDED START =================
         elif layer["operator"] == "FC":
             # 全连接层按输出特征数划分任务，每10个特征一个任务
             task_counts.append((layer["out_features"] + 9) // 10)
-        # ================= FC SUPPORT ADDED END =================
         else:
             # 其他算子（如Pool）固定为1个任务
             task_counts.append(1)
@@ -83,8 +81,13 @@ def generate_control_module(aligned_task_file, control_task_output_file, network
 
     # 1. 读取地址对齐后的任务指令文件
     with open(aligned_task_file, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+        # 增加换行符校验
+        if lines and not lines[-1].endswith('\n'):
+            lines[-1] = lines[-1] + '\n'
+
         # 读取所有行并去除首尾空白，忽略空行
-        task_lines = [line.strip() for line in f.readlines() if line.strip()]
+        task_lines = [line.strip() for line in lines if line.strip()]
 
     # 2. 重新分析任务指令，记录每个任务的起始行号和指令条数
     task_info = find_tasks_in_aligned_file(task_lines)

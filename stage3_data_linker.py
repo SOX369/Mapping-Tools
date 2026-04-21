@@ -81,7 +81,6 @@ def match_pool_db_operator(layer, operators):
         return op
     return None
 
-# ================= FC SUPPORT ADDED START =================
 def match_fc_db_operator(layer, target_out_features, operators):
     """在数据库中匹配一个全连接算子（逻辑与stage1一致）"""
     for op in operators:
@@ -91,7 +90,6 @@ def match_fc_db_operator(layer, target_out_features, operators):
         if op["isPrevFC"] != layer["isPrevFC"]: continue
         return op
     return None
-# ================= FC SUPPORT ADDED END =================
 
 
 def read_db_operators(db_root: str) -> List[Dict]:
@@ -122,18 +120,16 @@ Tuple[List[str], List[Dict], Dict, int, int]:
     task_records = []
     layer_addresses = {}
 
-    # --- 统一确定该层的任务数量 ---
+    # 统一确定该层的任务数量
     task_count = 1
     if layer["operator"] == "Conv":
         task_count = (layer["out_channels"] + 9) // 10
         total_out = layer.get("out_channels", 0)
-    # ================= FC SUPPORT ADDED START =================
     elif layer["operator"] == "FC":
         task_count = (layer["out_features"] + 9) // 10
         total_out = layer.get("out_features", 0)
-    # ================= FC SUPPORT ADDED END =================
 
-    # --- 步骤1: 统一收集该层所有任务的权重和输出数据 ---
+    # 统一收集该层所有任务的权重和输出数据
     weight_lines_all = []
     output_lines_all = []
     task_op_info = []  # 用于存储每个任务匹配到的算子信息
@@ -146,11 +142,9 @@ Tuple[List[str], List[Dict], Dict, int, int]:
             matched_op = match_conv_db_operator(layer, current_out, db_operators)
         elif layer["operator"] == "Pool":
             matched_op = match_pool_db_operator(layer, db_operators)
-        # ================= FC SUPPORT ADDED START =================
         elif layer["operator"] == "FC":
             current_out = min(10, total_out - task_idx * 10)
             matched_op = match_fc_db_operator(layer, current_out, db_operators)
-        # ================= FC SUPPORT ADDED END =================
 
         if not matched_op:
             error_details = (f"层{layer_idx}任务{task_idx + 1}未找到匹配算子\n"
@@ -168,7 +162,13 @@ Tuple[List[str], List[Dict], Dict, int, int]:
             if not os.path.exists(weight_path):
                 raise FileNotFoundError(f"权重文件缺失：{weight_path}")
             with open(weight_path, "r", encoding="utf-8") as f:
-                weight_lines = [line if line.endswith("\n") else line + "\n" for line in f.readlines()]
+                lines = f.readlines()
+                # 增加换行校验
+                if lines and not lines[-1].endswith('\n'):
+                    lines[-1] = lines[-1] + '\n'
+                weight_lines = [line if line.endswith("\n") else line + "\n" for line in lines]
+
+
             if len(weight_lines) != op_info["weight_data"]:
                 print(
                     f"警告：层{layer_idx}任务{task_idx + 1}的权重文件行数({len(weight_lines)})与info.json中记录的行数({op_info['weight_data']})不一致。")
@@ -185,7 +185,7 @@ Tuple[List[str], List[Dict], Dict, int, int]:
                 f"警告：层{layer_idx}任务{task_idx + 1}的输出文件行数({len(output_lines)})与info.json中记录的行数({op_info['output_data']})不一致。")
         output_lines_all.extend(output_lines)
 
-    # --- 步骤2: 将收集到的数据块写入内容列表，并计算地址 ---
+    # 将收集到的数据块写入内容列表，并计算地址
     # 写入权重数据块
     weight_start_addr = 0
     if layer["operator"] in ["Conv", "FC"]:
@@ -202,7 +202,7 @@ Tuple[List[str], List[Dict], Dict, int, int]:
     data_content.extend(SEPARATOR_LINES)
     current_line += 5
 
-    # --- 步骤3: 为该层的每个任务分别计算并填充地址映射 ---
+    # 为该层的每个任务分别计算并填充地址映射
     weight_offset = 0
     output_offset = 0
     for task_idx in range(task_count):
@@ -245,6 +245,11 @@ def process_data_module(network: List[Dict], task_file_path: str, db_operators: 
     # 读取任务指令文件内容（作为基础）
     with open(task_file_path, "r", encoding="utf-8") as f:
         task_content = f.readlines()
+
+        # 增加换行符校验
+        if task_content and not task_content[-1].endswith('\n'):
+            task_content[-1] = task_content[-1] + '\n'
+
     task_lines_count = len(task_content)
 
     # 初始化数据内容（从任务指令末尾开始）

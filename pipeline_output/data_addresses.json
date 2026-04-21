@@ -1,141 +1,141 @@
 {
   "1_layer": {
     "1_task": {
-      "inputData_addr": 5676,
-      "weightData_addr": 6065,
-      "outputData_addr": 6097,
+      "inputData_addr": 5677,
+      "weightData_addr": 6066,
+      "outputData_addr": 6098,
       "weight_lines": 27,
       "output_lines": 1280
     }
   },
   "2_layer": {
     "2_task": {
-      "inputData_addr": 6097,
-      "weightData_addr": 7382,
-      "outputData_addr": 7477,
+      "inputData_addr": 6098,
+      "weightData_addr": 7383,
+      "outputData_addr": 7478,
       "weight_lines": 90,
       "output_lines": 1280
     }
   },
   "3_layer": {
     "3_task": {
-      "inputData_addr": 7477,
+      "inputData_addr": 7478,
       "weightData_addr": 0,
-      "outputData_addr": 8762,
+      "outputData_addr": 8763,
       "weight_lines": 0,
       "output_lines": 320
     }
   },
   "4_layer": {
     "4_task": {
-      "inputData_addr": 8762,
-      "weightData_addr": 9087,
-      "outputData_addr": 9272,
+      "inputData_addr": 8763,
+      "weightData_addr": 9088,
+      "outputData_addr": 9273,
       "weight_lines": 90,
       "output_lines": 320
     },
     "5_task": {
-      "inputData_addr": 8762,
-      "weightData_addr": 9177,
-      "outputData_addr": 9592,
+      "inputData_addr": 8763,
+      "weightData_addr": 9178,
+      "outputData_addr": 9593,
       "weight_lines": 90,
       "output_lines": 320
     }
   },
   "5_layer": {
     "6_task": {
-      "inputData_addr": 9272,
-      "weightData_addr": 9917,
-      "outputData_addr": 10282,
+      "inputData_addr": 9273,
+      "weightData_addr": 9918,
+      "outputData_addr": 10283,
       "weight_lines": 180,
       "output_lines": 320
     },
     "7_task": {
-      "inputData_addr": 9272,
-      "weightData_addr": 10097,
-      "outputData_addr": 10602,
+      "inputData_addr": 9273,
+      "weightData_addr": 10098,
+      "outputData_addr": 10603,
       "weight_lines": 180,
       "output_lines": 320
     }
   },
   "6_layer": {
     "8_task": {
-      "inputData_addr": 10282,
-      "weightData_addr": 10927,
-      "outputData_addr": 11932,
+      "inputData_addr": 10283,
+      "weightData_addr": 10928,
+      "outputData_addr": 11933,
       "weight_lines": 500,
       "output_lines": 240
     },
     "9_task": {
-      "inputData_addr": 10282,
-      "weightData_addr": 11427,
-      "outputData_addr": 12172,
+      "inputData_addr": 10283,
+      "weightData_addr": 11428,
+      "outputData_addr": 12173,
       "weight_lines": 500,
       "output_lines": 240
     }
   },
   "7_layer": {
     "10_task": {
-      "inputData_addr": 11932,
-      "weightData_addr": 12417,
-      "outputData_addr": 13422,
+      "inputData_addr": 11933,
+      "weightData_addr": 12418,
+      "outputData_addr": 13423,
       "weight_lines": 500,
       "output_lines": 80
     },
     "11_task": {
-      "inputData_addr": 11932,
-      "weightData_addr": 12917,
-      "outputData_addr": 13502,
+      "inputData_addr": 11933,
+      "weightData_addr": 12918,
+      "outputData_addr": 13503,
       "weight_lines": 500,
       "output_lines": 80
     }
   },
   "8_layer": {
     "12_task": {
-      "inputData_addr": 13422,
-      "weightData_addr": 13587,
-      "outputData_addr": 13952,
+      "inputData_addr": 13423,
+      "weightData_addr": 13588,
+      "outputData_addr": 13953,
       "weight_lines": 180,
       "output_lines": 80
     },
     "13_task": {
-      "inputData_addr": 13422,
-      "weightData_addr": 13767,
-      "outputData_addr": 14032,
+      "inputData_addr": 13423,
+      "weightData_addr": 13768,
+      "outputData_addr": 14033,
       "weight_lines": 180,
       "output_lines": 80
     }
   },
   "9_layer": {
     "14_task": {
-      "inputData_addr": 13952,
-      "weightData_addr": 14117,
-      "outputData_addr": 14482,
+      "inputData_addr": 13953,
+      "weightData_addr": 14118,
+      "outputData_addr": 14483,
       "weight_lines": 180,
       "output_lines": 80
     },
     "15_task": {
-      "inputData_addr": 13952,
-      "weightData_addr": 14297,
-      "outputData_addr": 14562,
+      "inputData_addr": 13953,
+      "weightData_addr": 14298,
+      "outputData_addr": 14563,
       "weight_lines": 180,
       "output_lines": 80
     }
   },
   "10_layer": {
     "16_task": {
-      "inputData_addr": 14482,
+      "inputData_addr": 14483,
       "weightData_addr": 0,
-      "outputData_addr": 14647,
+      "outputData_addr": 14648,
       "weight_lines": 0,
       "output_lines": 80
     }
   },
   "11_layer": {
     "17_task": {
-      "inputData_addr": 14647,
-      "weightData_addr": 14732,
-      "outputData_addr": 15057,
+      "inputData_addr": 14648,
+      "weightData_addr": 14733,
+      "outputData_addr": 15058,
       "weight_lines": 320,
       "output_lines": 2
     }

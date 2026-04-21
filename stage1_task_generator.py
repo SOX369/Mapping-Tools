@@ -87,7 +87,6 @@ def match_pool_operator(layer, operators):
     return None
 
 
-# ================= FC SUPPORT ADDED START =================
 def match_fc_operator(layer, target_out_features, operators):
     """匹配全连接算子"""
     for op in operators:
@@ -100,13 +99,15 @@ def match_fc_operator(layer, target_out_features, operators):
     return None
 
 
-# ================= FC SUPPORT ADDED END =================
-
 def read_operator_excitation(op_path):
     """读取算子激励文件（op_jili.txt）内容"""
     excite_path = os.path.join(op_path, "op_jili.txt")
     with open(excite_path, "r", encoding="utf-8") as f:
-        return [line.rstrip("\n") for line in f.readlines()]
+        lines = f.readlines()
+        # 增加换行符校验
+        if lines and not lines[-1].endswith('\n'):
+            lines[-1] = lines[-1] + '\n'
+        return [line.strip() for line in lines if line.strip()]   # 对工作指令进行清洗，确保返回纯净指令列表
 
 
 def generate_original_task_file(network, operators, output_path):
@@ -168,7 +169,6 @@ def generate_original_task_file(network, operators, output_path):
             original_lines.extend(SEPARATOR_LINES)
             global_task_idx += 1
 
-        # ================= FC SUPPORT ADDED START =================
         elif layer["operator"] == "FC":
             total_out_features = layer["out_features"]
             # 按输出特征数划分任务，每10个为一次任务
@@ -192,7 +192,6 @@ def generate_original_task_file(network, operators, output_path):
                 original_lines.extend(excite_lines)
                 original_lines.extend(SEPARATOR_LINES)
                 global_task_idx += 1
-        # ================= FC SUPPORT ADDED END =================
 
     # 写入原始文件
     with open(output_path, "w", encoding="utf-8") as f:
