@@ -7,7 +7,7 @@ import stage4_address_modifier
 
 def run_pipeline():
 
-    NETWORK_PATH = "network_structure_output.json"
+    NETWORK_PATH = "network_structure_zengliang_6layers_alls.json"
     OP_LIBRARY_PATH = "Op_Library"
     DATA_DB_ROOT = "Data_Library"
     # 中间及输出文件路径
